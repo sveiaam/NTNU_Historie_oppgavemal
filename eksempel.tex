@@ -1,0 +1,76 @@
+%%%
+%%% Kompileringsinstruksjoner (må ha installert arara)
+%%%
+
+
+% arara: pdflatex: { draft: true }
+% arara: biber
+% arara: pdflatex: { synctex: true }
+% arara: pdflatex: { synctex: true } if found('log', 'undefined references')
+
+
+%%%
+%%% Importer pakker
+%%%
+
+
+% Definer noen fysiske aspekter ved dokumentet
+\documentclass[12pt, a4paper, norsk]{article}
+
+% Spesielle symboler (æøå)
+\usepackage[utf8]{inputenc}
+% Norsk ordbok til diverse bruk i automatiske kommandoer
+\usepackage{babel}
+% Tillater norsk bruk av anførselstegn
+\usepackage{csquotes}
+
+% Hyperlenker i referanser (og ellers)
+\usepackage{hyperref}
+
+% Siteringer med apa 6th. For fotnotestil, bruk kommandoen \footcite{key}.
+\usepackage[backend=biber, sortcites, style=apa6, citestyle=authoryear-ibid]{biblatex}
+\renewcommand*{\mkibid}[1]{ibid.}
+% Referansene ligger i fila references.bib
+\addbibresource{references.bib}
+
+
+%%%
+%%% Forsideinformasjon
+%%%
+
+
+\title{\huge{Tittel}}
+\author{Svein Åmdal}
+\date{\today}
+
+
+%%%
+%%% Dokumentets kropp
+%%%
+
+
+\begin{document}
+
+\maketitle
+\hrule
+\vspace{1cm}
+
+% Midlertidlig demonstrasjon av sitering \footcite[sidetall]{key}
+
+Bla bla bla \footcite[20]{Ødegård}. Ble ble ble \footcite[27--30]{Ødegård}. Bli bli bli \footcite[4]{Wiesner-Hanks}.
+
+
+% Sett inn kapitler som dette:
+% \input{./kapitler/kap1.tex}
+
+Brødtekst.
+
+
+% Legg til referanser
+
+% \clearpage
+\vspace{1cm}
+\hrule
+\printbibliography[title=Litteratur]
+
+\end{document}
