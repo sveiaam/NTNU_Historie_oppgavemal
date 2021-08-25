@@ -16,16 +16,15 @@
 %%%
 
 
-% Definer noen fysiske aspekter ved dokumentet
+% Definer noen fysiske aspekter ved dokumentet og bruk norsk ordbok
 \documentclass[12pt, a4paper, norsk]{article}
 
-% Spesielle symboler (æøå)
+% Spesielle symboler (æøå ++)
 \usepackage[utf8]{inputenc}
-% Norsk ordbok til diverse bruk i automatiske kommandoer
+% Bruk den norske ordboka i automatiske kommandoer
 \usepackage{babel}
 % Tillater norsk bruk av anførselstegn
 \usepackage{csquotes}
-
 % Hyperlenker i referanser (og ellers)
 \usepackage{hyperref}
 
@@ -59,13 +58,13 @@
 \vspace{1cm}
 
 % Midlertidlig demonstrasjon av sitering \footcite[sidetall]{key}
+Bla bla bla \footcite[20]{Ødegård}. Ble ble ble \footcite[27--30]{Ødegård}. Bli bli bli \footcite[4,22-23,45]{Wiesner-Hanks,Pounds}.
 
-Bla bla bla \footcite[20]{Ødegård}. Ble ble ble \footcite[27--30]{Ødegård}. Bli bli bli \footcite[4]{Wiesner-Hanks}.
 
-
-% Sett inn kapitler som dette:
+% Sett inn kapitler f.eks. som dette (egne filer som begynner med \chapter{key}):
 % \input{./kapitler/kap1.tex}
 
+% Eventuelt skriv teksten direkte inn i dette dokumentet:
 Brødtekst.
 
 
