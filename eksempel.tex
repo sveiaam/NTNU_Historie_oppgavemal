@@ -65,8 +65,8 @@
 \author{\huge{Svein Åmdal} \\ \large{NTNU}}
 \date{\today} % Erstatt med semester/år
 % Hvis forsiden skal være en egen side, gjør \clearpage etter maketitle
-% Hvis sammendrag skal være med, gjør \abstract{...}
-% Evt. sjekk ut titlepage-miljøet for å komponere egen titlepage
+% Hvis sammendrag skal være med, gjør for eksempel \abstract{...} eller bare skriv et vanlig avsnitt før \hrule og \clearpage
+% Evt. sjekk ut titlepage-miljøet for å komponere egen forside
 
 
 %%%
@@ -79,12 +79,14 @@
 \maketitle
 \hrule
 \vspace{1cm}
+% Fjern sidetall på forsiden (hvis du har med egen forside)
+\thispagestyle{empty}
 \clearpage
 % Gjør dette etter clearpage for å hoppe over forsiden som sidetall. Evt. bruk \frontmatter og \mainmatter for romersk -> latinsk sidenummer
 \setcounter{page}{1}
 
 % Midlertidlig demonstrasjon av sitering \footcite[sidetall]{key}
-Bla bla bla \footcite{Pounds}. Ble ble ble \footcite[27--30]{Ødegård}. Bli bli bli \footcites[4,22-23,45]{Wiesner-Hanks}[20]{Ødegård}.
+Bla bla bla \footcite{Pounds}. Ble ble ble \footcite[27--30]{Ødegård}. Bli bli bli \footcites[4,22-23,45]{Wiesner-Hanks}[20]{Ødegård}. Også et eksempel på bruk av \enquote{sjevron} som grammatisk korrekte anførselstegn.
 
 
 % Sett inn kapitler f.eks. som dette (egne filer som begynner med \chapter{key}):
