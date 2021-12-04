@@ -52,6 +52,9 @@
 \renewcommand*{\mkibid}[1]{Ibid.}
 % Referansene ligger i fila references.bib
 \addbibresource{references.bib}
+% La \fc og \fcs være en forkortelse for \footcite og \footcites
+\def\fc{\footcite}
+\def\fcs{\footcites}
 
 % Lag brødtekst automatisk for å vise layout av avsnitt, linjeavstand osv.
 \usepackage{lipsum}
@@ -85,8 +88,8 @@
 % Gjør dette etter clearpage for å hoppe over forsiden som sidetall. Evt. bruk \frontmatter og \mainmatter for romersk -> latinsk sidenummer
 \setcounter{page}{1}
 
-% Midlertidlig demonstrasjon av sitering \footcite[sidetall]{key}
-Bla bla bla \footcite{Pounds}. Ble ble ble \footcite[27--30]{Ødegård}. Bli bli bli \footcites[4,22-23,45]{Wiesner-Hanks}[20]{Ødegård}. Også et eksempel på bruk av \enquote{sjevron} som grammatisk korrekte anførselstegn.
+% Midlertidlig demonstrasjon av sitering \fc[sidetall]{key}
+Bla bla bl.\fc{Pounds} Ble ble ble.\fc[27--30]{Ødegård} Bli bli bli.\fcs[4,22-23,45]{Wiesner-Hanks}[20]{Ødegård} Også et eksempel på bruk av \enquote{sjevron} som grammatisk korrekte anførselstegn. Merk at fotnoten skal \emph{etter} punktum.
 
 
 % Sett inn kapitler f.eks. som dette (egne filer som begynner med \chapter{key}):
